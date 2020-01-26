@@ -13,6 +13,9 @@
 		6E9E239023DD6B7800EDFEA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E238E23DD6B7800EDFEA9 /* Main.storyboard */; };
 		6E9E239223DD6B7900EDFEA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E239123DD6B7900EDFEA9 /* Assets.xcassets */; };
 		6E9E239523DD6B7900EDFEA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E239323DD6B7900EDFEA9 /* LaunchScreen.storyboard */; };
+		6E9E23A023DD6C7800EDFEA9 /* DBChooser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9E239E23DD6C7800EDFEA9 /* DBChooser.framework */; };
+		6E9E23A123DD6C7800EDFEA9 /* DBChooser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E239F23DD6C7800EDFEA9 /* DBChooser.bundle */; };
+		6E9E23A823DD6E4C00EDFEA9 /* Bridging-Header.h in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E23A723DD6E4C00EDFEA9 /* Bridging-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6E9E239123DD6B7900EDFEA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E9E239423DD6B7900EDFEA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E9E239623DD6B7900EDFEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E9E239E23DD6C7800EDFEA9 /* DBChooser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DBChooser.framework; sourceTree = "<group>"; };
+		6E9E239F23DD6C7800EDFEA9 /* DBChooser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DBChooser.bundle; sourceTree = "<group>"; };
+		6E9E23A723DD6E4C00EDFEA9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9E23A023DD6C7800EDFEA9 /* DBChooser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				6E9E238723DD6B7800EDFEA9 /* DropboxSDKIntegration */,
+				6E9E23A223DD6CC600EDFEA9 /* SupportingFiles */,
 				6E9E238623DD6B7800EDFEA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +64,73 @@
 		6E9E238723DD6B7800EDFEA9 /* DropboxSDKIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				6E9E239C23DD6C3000EDFEA9 /* Resources */,
+				6E9E23A323DD6DFA00EDFEA9 /* MVC */,
+			);
+			path = DropboxSDKIntegration;
+			sourceTree = "<group>";
+		};
+		6E9E239C23DD6C3000EDFEA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E239D23DD6C4700EDFEA9 /* Libraries */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6E9E239D23DD6C4700EDFEA9 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E239F23DD6C7800EDFEA9 /* DBChooser.bundle */,
+				6E9E239E23DD6C7800EDFEA9 /* DBChooser.framework */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		6E9E23A223DD6CC600EDFEA9 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				6E9E238823DD6B7800EDFEA9 /* AppDelegate.swift */,
 				6E9E238A23DD6B7800EDFEA9 /* SceneDelegate.swift */,
-				6E9E238C23DD6B7800EDFEA9 /* ViewController.swift */,
-				6E9E238E23DD6B7800EDFEA9 /* Main.storyboard */,
 				6E9E239123DD6B7900EDFEA9 /* Assets.xcassets */,
 				6E9E239323DD6B7900EDFEA9 /* LaunchScreen.storyboard */,
 				6E9E239623DD6B7900EDFEA9 /* Info.plist */,
+				6E9E23A723DD6E4C00EDFEA9 /* Bridging-Header.h */,
 			);
-			path = DropboxSDKIntegration;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		6E9E23A323DD6DFA00EDFEA9 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E23A423DD6E0100EDFEA9 /* Model */,
+				6E9E23A623DD6E1B00EDFEA9 /* View */,
+				6E9E23A523DD6E0800EDFEA9 /* Controller */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		6E9E23A423DD6E0100EDFEA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E9E23A523DD6E0800EDFEA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E238C23DD6B7800EDFEA9 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6E9E23A623DD6E1B00EDFEA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E9E238E23DD6B7800EDFEA9 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +191,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9E23A823DD6E4C00EDFEA9 /* Bridging-Header.h in Resources */,
 				6E9E239523DD6B7900EDFEA9 /* LaunchScreen.storyboard in Resources */,
+				6E9E23A123DD6C7800EDFEA9 /* DBChooser.bundle in Resources */,
 				6E9E239223DD6B7900EDFEA9 /* Assets.xcassets in Resources */,
 				6E9E239023DD6B7800EDFEA9 /* Main.storyboard in Resources */,
 			);
@@ -285,13 +353,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DropboxSDKIntegration/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DropboxSDKIntegration/Resources/Libraries",
+				);
+				INFOPLIST_FILE = "SupportingFiles//Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ioskunal.DropboxSDKIntegration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,13 +375,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DropboxSDKIntegration/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DropboxSDKIntegration/Resources/Libraries",
+				);
+				INFOPLIST_FILE = "SupportingFiles//Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ioskunal.DropboxSDKIntegration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
