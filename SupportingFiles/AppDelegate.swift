@@ -11,13 +11,19 @@ import UIKit
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
+    //MARK:- VARIABLES
+
+    var window: UIWindow?
     let isDevEnvironment = true
     lazy var chooser: DBChooser = {
+        // update the Keys in the Info.plist as well
         let dropboxKey = isDevEnvironment ? "DEV_KEY" : "PROD_KEY"
         return DBChooser(appKey: dropboxKey)
     }() // isDevEnvironment is just for example, this will be dependent upon you app config. For example AppEnvionment.current() == .dev
     
+    //MARK:- APPLICATION LIFE CYCLE
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -25,25 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         if chooser.handleOpen(url) {
+            if let files = url.queryParameters?["files"]?.toJSON() as? [JSON] {
+                let dictDeepLink = files[0]
+                ViewController().uploadFileToServer(dictDeepLink)
+            }
             return true
         }
         return false
     }
-    
-    // MARK: UISceneSession Lifecycle
-    
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-    
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-    
-    
+
 }
 
