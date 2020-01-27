@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E1DB83423DF47CF006A5875 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DB83323DF47CF006A5875 /* URLExtensions.swift */; };
+		6E1DB83623DF4975006A5875 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DB83523DF4975006A5875 /* StringExtension.swift */; };
 		6E9E238923DD6B7800EDFEA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E238823DD6B7800EDFEA9 /* AppDelegate.swift */; };
-		6E9E238B23DD6B7800EDFEA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E238A23DD6B7800EDFEA9 /* SceneDelegate.swift */; };
 		6E9E238D23DD6B7800EDFEA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E238C23DD6B7800EDFEA9 /* ViewController.swift */; };
 		6E9E239023DD6B7800EDFEA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E238E23DD6B7800EDFEA9 /* Main.storyboard */; };
 		6E9E239223DD6B7900EDFEA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E9E239123DD6B7900EDFEA9 /* Assets.xcassets */; };
@@ -19,9 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E1DB83323DF47CF006A5875 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		6E1DB83523DF4975006A5875 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		6E9E238523DD6B7800EDFEA9 /* DropboxSDKIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxSDKIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9E238823DD6B7800EDFEA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E9E238A23DD6B7800EDFEA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6E9E238C23DD6B7800EDFEA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6E9E238F23DD6B7800EDFEA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E9E239123DD6B7900EDFEA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E1DB83223DF47C6006A5875 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E1DB83323DF47CF006A5875 /* URLExtensions.swift */,
+				6E1DB83523DF4975006A5875 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6E9E237C23DD6B7800EDFEA9 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +84,7 @@
 		6E9E239C23DD6C3000EDFEA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E1DB83223DF47C6006A5875 /* Extensions */,
 				6E9E239D23DD6C4700EDFEA9 /* Libraries */,
 			);
 			path = Resources;
@@ -91,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				6E9E238823DD6B7800EDFEA9 /* AppDelegate.swift */,
-				6E9E238A23DD6B7800EDFEA9 /* SceneDelegate.swift */,
 				6E9E239123DD6B7900EDFEA9 /* Assets.xcassets */,
 				6E9E239323DD6B7900EDFEA9 /* LaunchScreen.storyboard */,
 				6E9E239623DD6B7900EDFEA9 /* Info.plist */,
@@ -207,8 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E9E238D23DD6B7800EDFEA9 /* ViewController.swift in Sources */,
+				6E1DB83423DF47CF006A5875 /* URLExtensions.swift in Sources */,
+				6E1DB83623DF4975006A5875 /* StringExtension.swift in Sources */,
 				6E9E238923DD6B7800EDFEA9 /* AppDelegate.swift in Sources */,
-				6E9E238B23DD6B7800EDFEA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,11 +365,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QT58N34Q7;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DropboxSDKIntegration/Resources/Libraries",
 				);
 				INFOPLIST_FILE = "SupportingFiles//Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,11 +390,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QT58N34Q7;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DropboxSDKIntegration/Resources/Libraries",
 				);
 				INFOPLIST_FILE = "SupportingFiles//Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
